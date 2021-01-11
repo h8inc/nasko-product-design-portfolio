@@ -1,0 +1,306 @@
+/* Font Loading */
+
+@font-face {
+  font-family: "Aeonik-Ligt";
+  src: url("../fonts/AeonikTRIAL-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeonik-Regular";
+  src: url("../fonts/AeonikTRIAL-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Aeonik-Bold";
+  src: url("../fonts/AeonikTRIAL-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Chapeau-Black";
+  src: url("../fonts/ChapeauWEB-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Chapeau-Medium";
+  src: url("../fonts/ChapeauWEB-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "SuisseNeue-Regular";
+  src: url("../fonts/SuisseNeue-Regular.woff") format("woff"),
+    url("../fonts/SuisseNeue-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ogg";
+  src: url("../fonts/Ogg-Regular.woff") format("woff"),
+    url("../fonts/Ogg-Regular.woff2") format("woff2");
+}
+
+/* Backgrounds */
+.black {
+  background-color: black;
+  color: white;
+}
+
+.white {
+  background-color: white;
+  color: black;
+  transform: skew(2deg);
+}
+
+/* Flex */
+
+@media (min-width: 768px) {
+}
+
+/*SKEW*/
+
+.skew-2deg {
+  transform: skewY(-2deg);
+}
+
+.skew2deg {
+  transform: skewY(2deg);
+}
+
+/* Legend of Colors */
+:root {
+  --black: #000;
+  --white: #fff;
+  --gray: #eee;
+  --darkGray: #292429;
+  --projcolor: red;
+}
+
+::selection {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* Texts */
+
+h1 {
+  font-size: 35px;
+  font-weight: 700;
+  font-family: "Aeonik-Bold";
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: "Aeonik-Regular";
+  font-size: 30px;
+  padding-right: 0;
+}
+
+h3 {
+  font-family: "Aeonik-Regular";
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+p {
+  font-family: "Aeonik-Ligt";
+  font-weight: bolder;
+  list-style-type: none;
+  padding-top: 10px;
+  max-width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h2 {
+    font-size: 40px;
+    padding-bottom: 15px;
+    padding-right: 0;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
+
+@media screen and (min-width: 2880px) {
+  h1 {
+    font-size: 90px;
+  }
+
+  h2,
+  .card h2 {
+    font-size: 70px;
+    padding-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 50px;
+  }
+
+  p,
+  .cta {
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 3500px) {
+}
+
+/* Section alignemnt */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 12vw 6vw;
+}
+
+.margin_negative {
+  margin-top: -10%;
+  height: 30vh;
+}
+
+/* BOXES */
+
+.notes {
+  align-items: left;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 0 2rem 0;
+}
+
+.box {
+  font-family: "Architects Daughter", cursive;
+  padding: 1.5em;
+  margin: 1em 0em;
+  border-radius: 2px;
+  text-align: center;
+  background: transparent;
+  box-shadow: 10px 10px 10px rgba(68, 68, 68, 0.1),
+    10px 10px 10px rgba(68, 68, 68, 0.2);
+  z-index: 5;
+  border-style: dotted;
+  max-width: 100%;
+  text-align: center;
+}
+
+.display-flex {
+  display: flex;
+}
+
+@media only screen and (min-width: 768px) {
+  .notes {
+    justify-content: space-between;
+  }
+
+  .box {
+    margin-right: 2em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .notes {
+    margin: 40px 0 40px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+/* Homepage Color */
+
+:root .home {
+  --projcolor: var(--white);
+  transition: 200ms ease-in-out;
+}
+
+@media (min-width: 768px) {
+  :root .home {
+    --projcolor: #222;
+    transition: 200ms ease-in-out;
+  }
+}
+
+.end {
+  margin-bottom: 128px;
+}
+
+.name {
+  /* Fallback: Set a background color. */
+  background-color: #00f;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    45deg,
+    #00f,
+    #e16541,
+    #e16541,
+    #f18f43,
+    #f18f43,
+    #78854f,
+    #8b9862,
+    #476098,
+    #476098,
+    #a7489b
+  );
+
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+}
+
+.name:hover {
+  animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+}
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  40% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 100%;
+  }
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+  0% {
+    background-size: 100%;
+  }
+  80% {
+    background-size: 650%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}
+
+.content {
+  text-align: left;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  padding-bottom: 6vw;
+}

@@ -1,0 +1,49 @@
+.project summary h3 {
+  font-family: "Aeonik-Regular";
+  font-size: 25px;
+  margin-top: 25px;
+}
+.project-summary img {
+  max-width: 300px;
+  margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .project-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: fit-content;
+  }
+
+  .project-summary a {
+    align-self: center;
+  }
+
+  .project-summary img {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .text {
+    padding-right: 2em;
+    max-width: 40%;
+    align-self: center;
+  }
+}
+
+@media (min-width: 1600px) {
+}
+
+@media (min-width: 2000px) {
+  .project-summary img {
+    min-width: 1000px;
+  }
+}
+
+@media (min-width: 3000px) {
+  .project-summary img {
+    width: fit-content;
+    min-width: 1500px;
+  }
+}

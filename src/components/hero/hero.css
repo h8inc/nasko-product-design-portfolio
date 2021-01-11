@@ -1,0 +1,29 @@
+.hero {
+  height: 70vh;
+  background-size: cover;
+  background-color: white;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.hero .content {
+  color: black;
+  z-index: 2;
+}
+
+@media screen and (min-width: 1024px) {
+  .br-on-mobile {
+    display: none;
+  }
+
+  .hero {
+    align-items: left;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 90vh;
+  }
+}

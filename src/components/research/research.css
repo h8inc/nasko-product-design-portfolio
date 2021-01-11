@@ -1,0 +1,32 @@
+.research a {
+  color: black;
+}
+
+.research img {
+  transform: skewY(2deg);
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .research {
+    flex-direction: row;
+  }
+
+  .wrap {
+    flex-wrap: wrap;
+  }
+
+  .research .notes .card-white {
+    margin-right: 10px;
+  }
+  .research img {
+    max-width: 170%;
+    align-self: left;
+  }
+
+  img.roger-research {
+    max-width: 50%;
+  }
+}

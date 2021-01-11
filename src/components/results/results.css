@@ -1,0 +1,7 @@
+.results {
+  transform: skewY(2deg);
+  max-width: 80%;
+  color: #fff;
+  align-items: center;
+  max-width: 100%;
+}

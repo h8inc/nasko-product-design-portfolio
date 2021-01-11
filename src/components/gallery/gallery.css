@@ -1,0 +1,146 @@
+.gallery {
+  padding: 0;
+  margin: 0;
+}
+
+.gallery h2 {
+  font-family: "Aeonik-Regular";
+  margin-left: 6vw;
+  margin-top: 6vw;
+  font-size: 30px;
+}
+
+.gallery-list {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+  max-width: 100%;
+}
+
+.gallery-list::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.research .gallery-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.gallery-list::-webkit-scrollbar-thumb {
+  background: #201c29;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.gallery-list::-webkit-scrollbar-track {
+  background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
+}
+
+.gallery-card {
+  height: 350px;
+  width: 400px;
+  min-width: 250px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  scroll-snap-align: start;
+  clear: both;
+  position: relative;
+}
+
+.gallery-card:focus-within ~ .gallery-card,
+.gallery-card:hover ~ .gallery-card {
+  transform: translateX(250px);
+}
+
+.gallery-card:hover {
+  transform: translateY(-1rem);
+}
+
+.gallery-card:not(:first-child) {
+  margin-left: -200px;
+}
+
+.gallery-card-content {
+  transform: translate(0, 50%);
+}
+
+.gallery-list img {
+  border-radius: 2%;
+  box-shadow: -1rem 0 3rem black;
+  max-width: 150%;
+}
+
+@media only screen and (min-width: 764px) {
+  .gallery-list {
+    overflow: auto;
+    margin-left: 1vw;
+    max-width: 99%;
+  }
+
+  .gallery-card {
+    padding: 2.5rem;
+    height: auto;
+  }
+
+  .gallery-list img {
+    max-width: 300%;
+  }
+
+  .gallery-card:hover ~ .gallery-card {
+    transform: translateX(550px);
+  }
+
+  .gallery-card-content {
+    transform: translate(0%);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .gallery-list {
+    overflow: auto;
+    margin-left: 3vw;
+    max-width: 98%;
+  }
+
+  .gallery h2 {
+    margin-top: 2vw;
+  }
+
+  .gallery-card:hover ~ .gallery-card {
+    transform: translateX(400px);
+  }
+
+  .gallery-list img {
+    max-width: 200%;
+  }
+
+  .gallery-card-content {
+    transform: translate(0%, 5%);
+  }
+}
+
+/* 4K VERSION */
+@media (min-width: 2560px) {
+  .gallery-list {
+    margin-left: 4.5vw;
+    min-width: 95%;
+  }
+}
+
+@media (min-width: 3000px) {
+  .gallery-list {
+    height: 1200px;
+  }
+
+  .gallery-list img {
+    max-width: 400%;
+  }
+
+  .gallery-card:hover ~ .gallery-card {
+    transform: translateX(1200px);
+  }
+}
